@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+:root {
+    --red: #d63a25;
+    --white: #fff;
+    --dark: #1e2c2a;
+
+}
+
+body {
+    color: var(--white);
+    background: var(--dark);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background: var(--white);
+    transition: all 0.5s;
+    position: fixed;
+    
+}
+
+.menu .logo {
+    color: var(--red);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--dark);
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.menu ul li a {
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.menu ul li a:hover {
+    color: var(--red);
+}
+
+.menu i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--red);
+
+}
+
+.navegar {
+    cursor: pointer;
+   
+    
+   
+}
+
+.navegar .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 6px auto;
+    transition: all 0.3ss;
+    
+}
+
+.navegar .bar:nth-child(1),
+.navegar .bar:nth-child(3) {
+    background: var(--red);
+}
+
+footer {
+    text-align: center;
+    font-size: 10pt;
+}
+
+.navigator {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.home-int {
+    max-width: 37rem;
+
+}
+
+.home-int .texto-h4 {
+    font-size: 1.5rem;
+    color: var(--red);
+    margin-bottom: 1rem;
+
+}
+
+.home-int .texto-h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+}
+
+.home-int p {
+    margin-bottom: 4rem;
+}
+
+.home-btn {
+    padding: 15px 45px;
+    background: var(--red);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+.home-btn:hover {
+    background: #efc4ce;
+
+}
+
+.home-img img {
+    width: 100%;
+}
+
+@media (max-width: 785){
+    .navegar {
+        padding: 18px 20px;
+        display: block;
+        
+    }
+}
+
+/*@media (max-width: 600) {
+    .navegar {
+        padding: 18px 20px;
+        
+    }
+}*/
+
+.menu.ativo .bar:nth-child(1) {
+    transition: translateY(8px) rotate(45deg);
+}
+
+.menu.ativo .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.ativo .bar:nth-child(3) {
+    transition: translateY(-8px) rotate(-45deg);
+}
+.nav-main {
+    position: fixed;
+    right: -100%;
+    top: 75px;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    background: var(--white);
+    gap: -10px;
+    transition: 0.3s;
+}
+
+.nav-main.ativo {
+    right: 0;
+
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.home-int {
+    padding: 100px 2px;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    gap: 5rem;
+}
+
+.home-int .texto-h4 {
+    font-size: 15px;
+}
+
+.home-int .texto-h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+.home-int {
+    font-size: 15px;
+}
+
+.home-img {
+    width: 125%;
+}
